@@ -109,7 +109,7 @@ curl --location --request PATCH 'http://localhost:3001/appointment/update' \
   **3. Canceling an Appointment :**
     - You can cancel an existing appointment, and the system will free up the booked slot.
 
-    ```bash
+```bash
 curl --location --request DELETE 'http://localhost:3001/appointment/cancel' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -122,7 +122,7 @@ curl --location --request DELETE 'http://localhost:3001/appointment/cancel' \
     - The system allows you to retrieve the appointment details for a specific patient. 
     - You will get information such as the patient's booked slot, the assigned doctor, and the appointment time.
 
-    ```bash
+```bash
 curl --location 'http://localhost:3001/appointment/patient?email=aaa%40gmail.com'
 ```
 
