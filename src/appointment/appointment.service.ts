@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { Appointment } from './modal/appointment.modal';
 import { CancelAppointmentDto, CreateAppointmentDto, UpdateAppointmentDto } from './dto/appointment.dto';
-import { BaseException } from 'src/exceptions/baseExceptions';
+import { BaseException } from '../exceptions/baseExceptions';
 import { v4 as uuidv4 } from 'uuid';
-import { isEmpty } from 'src/common/helper/helper';
+import { isEmpty } from '../common/helper/helper';
 
 
 
