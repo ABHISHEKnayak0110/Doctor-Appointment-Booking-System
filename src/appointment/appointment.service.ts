@@ -94,7 +94,7 @@ export class AppointmentService {
       this.appointments.push(newAppointment);
       this.manageSlot(doctorName, "BOOK", timeSlot)
     
-      return { data: newAppointment };
+      return { message : "Appointment booked successfully !" , data: newAppointment };
 
     } catch (error) {
       throw new BaseException(
@@ -218,8 +218,12 @@ export class AppointmentService {
       this.manageSlot(appointment[0]?.doctorName, "CANCEL", originalTimeSlot)
       this.manageSlot(appointment[0]?.doctorName, "BOOK", newTimeSlot)
       return {
-        ...appointment[0],
-        timeSlot: newTimeSlot
+        message : "Appointment updated successfully",
+        data : {
+          ...appointment[0],
+          timeSlot: newTimeSlot
+        }
+       
       }
 
     } catch (error) {
